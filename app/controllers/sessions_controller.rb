@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    if session[:name] != "" 
+    if !!session[:name] 
       redirect_to '/'
     end
   end
